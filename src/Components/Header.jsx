@@ -36,10 +36,11 @@ const Header = () => {
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
               <NavLink
+              
                 to="/home"
                 aria-label="Our Home"
                 title="Our Home"
-                className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className='font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400'
               >
                 Home
               </NavLink>
