@@ -25,7 +25,7 @@ const ShowQuestion = ({ data }) => {
             <span className="text-md font-bold">No. Question:</span>
             <br />
             <span className="text-purple-900 text-lg font-serif">
-              {QuestionName}
+              {QuestionName.replace(/(<([^>]+)>)/ig,"")}
             </span>
             <div className="grid md:grid-cols-2 gap-2">
               {options.map((options) => (

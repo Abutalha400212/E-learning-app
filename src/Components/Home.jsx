@@ -40,7 +40,7 @@ const Home = () => {
                 to="/topics"
                 className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded shadow-md bg-deep-purple-accent-600 hover:bg-blue-500 focus:shadow-outline focus:outline-none"
               >
-                Get started
+               Quiz Now
               </Link>
               <Link
                 to="/blog"

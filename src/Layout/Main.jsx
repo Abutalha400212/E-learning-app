@@ -5,9 +5,10 @@ import Footer from "../Components/Footer";
 
 export const GetHeaderData = createContext([]);
 const Main = () => {
-  const quizHeaderData = useLoaderData();
+  const itemsData = useLoaderData();
+
   return (
-    <GetHeaderData.Provider value={quizHeaderData}>
+    <GetHeaderData.Provider value={itemsData}>
       <Header></Header>
       <Outlet></Outlet>
       <Footer></Footer>
