@@ -11,7 +11,7 @@ import Main from "./Main";
     {
         path:'/',
         element:<Main></Main>,
-        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+        loader: ()=> fetch('https://openapi.programming-hero.com/api/quiz'),
         errorElement:<Error></Error>,
         children:[
             {path:'/',element:<Home></Home>},

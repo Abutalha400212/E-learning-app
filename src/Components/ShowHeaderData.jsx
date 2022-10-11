@@ -8,8 +8,8 @@ const ShowHeaderData = ({data}) => {
         <figure><img src={logo} alt="Shoes" /></figure>
         <div className="card-body flex justify-around mt-2">
           <h2 className="card-title p-2 text-xl font-bold">{name}</h2>
-          <div className="card-actions ">
-            <button  className="bg-blue-700 p-2 border rounded w-40"> <Link to={`../topics/${id}`}>Start Quiz</Link> </button>
+          <div className="card-actions mt-2">
+            <button  className="bg-blue-700 p-2 border rounded w-40 mb-2"> <Link to={`../topics/${id}`}>Start Quiz</Link> </button>
           </div>
         </div>
       </div>

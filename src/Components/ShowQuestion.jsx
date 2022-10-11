@@ -27,7 +27,7 @@ const ShowQuestion = ({ data }) => {
             <span className="text-purple-900 text-lg font-serif">
               {QuestionName}
             </span>
-            <div className="grid md:grid-cols-2">
+            <div className="grid md:grid-cols-2 gap-2">
               {options.map((options) => (
                 <Options options={options}></Options>
               ))}

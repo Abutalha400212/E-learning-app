@@ -9,7 +9,7 @@ const QuizQuestion = () => {
  const newCount = useContext(ProvideContext)
   return (
         <div className="relative">
-      <div className="w-9/12 mx-24 mt-12 flex justify-between">
+      <div className="w-9/12 mx-24 mt-12 md:flex justify-between">
         <ul className="grid grid-cols-1 gap-y-3 list-decimal ">
           {quiz.map((data) => <ShowQuestion
                 key={data.id}
@@ -17,7 +17,6 @@ const QuizQuestion = () => {
               ></ShowQuestion>
             )};
         </ul>
-      
       <div className="w-3/12">
        <h1>Correct{newCount}</h1>
       </div>
