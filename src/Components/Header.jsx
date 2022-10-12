@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import './Header.css'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +41,7 @@ const Header = () => {
                 to="/home"
                 aria-label="Our Home"
                 title="Our Home"
-                className='font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400'
+                className={`${({isActive}) =>isActive ? 'text-white' : undefined}font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400`}
               >
                 Home
               </NavLink>
@@ -50,7 +51,7 @@ const Header = () => {
                 to="/topics"
                 aria-label="Our topics"
                 title="Our topics"
-                className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className={`${({isActive}) =>isActive ? 'text-white' : undefined}font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400`}
               >
                 Topics
               </NavLink>
@@ -60,7 +61,7 @@ const Header = () => {
                 to="/statistics"
                 aria-label="Statistics"
                 title="Statistics"
-                className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className={`${({isActive}) =>isActive ? 'text-white' : undefined}font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400`}
               >
                 Statistics
               </NavLink>
@@ -70,7 +71,7 @@ const Header = () => {
                 to="/blog"
                 aria-label="Blogs"
                 title="Blogs"
-                className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className={`${({isActive}) =>isActive ? 'text-white' : undefined}font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400`}
               >
                 Blogs
               </NavLink>
@@ -153,7 +154,7 @@ const Header = () => {
                           to="/home"
                           aria-label="Our Home"
                           title="Our Home"
-                          className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={`${({isActive}) =>isActive ? 'bg-white' : undefined}font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400`}
                         >
                           Home
                         </NavLink>
@@ -163,7 +164,7 @@ const Header = () => {
                           to="/topics"
                           aria-label="Our Topics"
                           title="Our Topics"
-                          className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={`${({isActive}) =>isActive ? 'text-white' : undefined}font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400`}
                         >
                           Topics
                         </NavLink>
@@ -173,7 +174,7 @@ const Header = () => {
                           to="/statistics"
                           aria-label="Statistics"
                           title="Statistics"
-                          className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={`${({isActive}) =>isActive ? 'text-white' : undefined}font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400`}
                         >
                           Statistics
                         </NavLink>
@@ -183,7 +184,7 @@ const Header = () => {
                           to="/blog"
                           aria-label="Blogs"
                           title="Blogs"
-                          className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={`${({isActive}) =>isActive ? 'text-white' : undefined}font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400`}
                         >
                           Blogs
                         </NavLink>

@@ -1,6 +1,8 @@
 import React, { useContext} from 'react';
+import { selectedData } from '../Layout/DataLoader';
 import { CountContext } from './ShowQuestion';
 const Options = ({options}) => {
+  selectedData(options)
     const setAns = useContext(CountContext)
     return (
         <div>

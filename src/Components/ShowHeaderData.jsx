@@ -9,7 +9,7 @@ const ShowHeaderData = ({data}) => {
         <div className="card-body flex justify-around mt-2">
           <h2 className="card-title p-2 text-xl font-bold">{name}</h2>
           <div className="card-actions mt-2">
-            <button  className="bg-blue-700 p-2 border rounded w-40 mb-2"> <Link to={`../topics/${id}`}>Start Quiz</Link> </button>
+            <button  className="bg-blue-500 p-2 border rounded w-40 mb-2 font-semibold hover:bg-blue-800 hover:text-white"> <Link to={`../topics/${id}`}>Start Quiz</Link> </button>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import {EyeIcon } from "@heroicons/react/24/solid";
 import { createContext, useState } from "react";
 import { toast } from "react-toastify";
+import { selectedData } from "../Layout/DataLoader";
 import Options from "./Options";
 export const CountContext = createContext([]);
 export const countAns = createContext([]);
@@ -11,8 +12,9 @@ const ShowQuestion = ({ data }) => {
   const QuestionName = data.question;
   let count = 0;
   const setAns = (props) => {
+    
     const value = props.target.innerText;
-    console.log(value);
+    selectedData(value)
     if (value === ans) {
       count = count + 1;
       toast.success("Wow! Your Ans is Correct", { autoClose: 500 });
@@ -26,9 +28,9 @@ const ShowQuestion = ({ data }) => {
         <div>
           <div>
             <li>
-              <div className="flex justify-between">
+              <div className="flex md:justify-between">
                 <span className="text-md font-bold">No. Question:</span>
-                <EyeIcon onClick={()=> setToggle(!toggle) } className="h-6 w-6 text-blue-500 cursor-pointer"/>
+                <EyeIcon onClick={()=> setToggle(!toggle) } className="h-6 w-6 text-blue-500 cursor-pointer ml-5"/>
               </div>
                 <span className="text-purple-900 text-lg font-serif">
                   {QuestionName.replace(/(<([^>]+)>)/gi, "")}
