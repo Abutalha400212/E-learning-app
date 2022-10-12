@@ -2,15 +2,19 @@ import { createContext, useState } from "react";
 import { toast } from "react-toastify";
 import Options from "./Options";
 export const CountContext = createContext([]);
-export const ProvideContext = createContext([]);
+export const countAns = createContext([])
 const ShowQuestion = ({ data }) => {
   const ans = data.correctAnswer;
   const options = data.options;
   const QuestionName = data.question;
   const [rs, setRs] = useState([]);
+  let count = 0;
   const setAns = (props) => {
-    const value = props.target.innerText;
+    const value = props.target.innerText
+    console.log(value)
     if (value === ans) {
+      count = count + 1
+      console.log(count)
       toast.success("Wow! Your Ans is Correct", { autoClose: 500 });
     } else {
       setRs(ans);
@@ -19,6 +23,7 @@ const ShowQuestion = ({ data }) => {
   };
   return (
     <CountContext.Provider value={setAns}>
+      <countAns.Provider value={count}>
       <div>
         <div>
           <li>
@@ -40,6 +45,7 @@ const ShowQuestion = ({ data }) => {
             </h1>
         </div>
       </div>
+      </countAns.Provider>
     </CountContext.Provider>
   );
 };
