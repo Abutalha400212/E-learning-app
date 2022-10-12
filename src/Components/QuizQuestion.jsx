@@ -6,8 +6,8 @@ const QuizQuestion = () => {
   const QuizData = useLoaderData();
   const quiz = QuizData.data.questions;
   return (
-    <div>
-      <div className="md:w-7/12 w-11/12 mx-8  md:mx-auto mt-12 md:flex md:justify-between">
+    <div className=" mt-12">
+      <div className="md:w-7/12 w-11/12 mx-8  md:mx-auto md:flex md:justify-between">
         <ul className="grid grid-cols-1 gap-y-3 list-decimal">
           {quiz.map((data) => {
             return <ShowQuestion key={data.id} data={data}></ShowQuestion>;
