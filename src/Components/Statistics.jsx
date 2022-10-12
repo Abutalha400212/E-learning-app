@@ -13,12 +13,11 @@ const Statistics = () => {
   const loadData = useContext(GetHeaderData);
   const data = loadData.data;
   return (
-    <div className="md:w-1/2 md:mx-auto mt-10">
+    <div className="md:w-[50%] md:mx-auto mt-10">
         <LineChart
-          width={450}
-          height={400}
+          width={350}
+          height={300}
           data={data}
-          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
